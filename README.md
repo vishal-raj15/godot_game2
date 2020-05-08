@@ -2,7 +2,7 @@
 
 its a 2d platform game.
 
-DODGE THE CREEPS !(open this project in godot engine)
+DODGE THE CREEPS !(open this project in godot engine , use up,down,left,right key to controll the player)
 
 ![Screenshot from 2020-05-08 08-29-35](https://user-images.githubusercontent.com/50707709/81365746-a27aa780-9106-11ea-9049-0b7e045ec170.png)
 
