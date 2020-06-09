@@ -13,11 +13,14 @@ func new_game():
 	$startTimer.start()
 	$HUD.show_message("Get Ready")
 	$HUD.update_score(score)
+	$music.play()
 	
 func game_over():
 	$scoreTimer.stop()
 	$mobTimer.stop()
 	$HUD.game_over()
+	$deathSound.play()
+	$music.stop()
 
 func _on_startTimer_timeout():
 	$mobTimer.start()
