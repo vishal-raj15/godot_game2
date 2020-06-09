@@ -34,7 +34,7 @@ curve = SubResource( 1 )
 [node name="mobSponLocation" type="PathFollow2D" parent="mobPath"]
 
 [node name="HUD" parent="." instance=ExtResource( 3 )]
-[connection signal="hit" from="player" to="." method="_on_player_hit"]
+[connection signal="hit" from="player" to="." method="game_over"]
 [connection signal="timeout" from="mobTimer" to="." method="_on_mobTimer_timeout"]
 [connection signal="timeout" from="scoreTimer" to="." method="_on_scoreTimer_timeout"]
 [connection signal="timeout" from="startTimer" to="." method="_on_startTimer_timeout"]

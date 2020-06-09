@@ -4,15 +4,14 @@ signal hit
 
 export (int) var speed = 400  # How fast the player will move (pixels/sec).
 var screen_size 
-var velocity = Vector2()
 
 func _ready():
-	hide()
-	screen_size = get_viewport_rect().size
 	
+	screen_size = get_viewport_rect().size
+	hide()
 	
 func _process(delta):
-	velocity = Vector2()  # The player's movement vector.
+	var velocity = Vector2()  # The player's movement vector.
 	if Input.is_action_pressed("ui_right"):
 		velocity.x += 1
 	if Input.is_action_pressed("ui_left"):
@@ -43,12 +42,12 @@ func _process(delta):
 
 # warning-ignore:unused_argument
 func _on_player_body_entered( body ):
-	$collision.disabled = true
 	hide()
 	emit_signal("hit")
-	
+	$CollisionShape2D.set_deferred("disabled", true)
 	
 func start(pos):
 	position = pos
 	show()
+	monitoring=true
 	$CollisionShape2D.disabled = false

@@ -21,6 +21,8 @@ func game_over():
 	$startButton.show()
 	$messageLabel.text = "Dodge the\nCreeps!"
 	$messageLabel.show()
+#	yield(get_tree().create_timer(1), "timeout")
+	
 	
 func update_score(score):
 	$scoreLabel.text = str(score)
